@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <style>
+            .xyz{
+                color:red;
+            }
+        </style>
+        <script>
+            function test1(){
+                console.log("--called test1");
+                try{
+                    document.getElementById("abc").setAttribute("class","xyz");
+                }catch(e){
+                    console.log("--inside test1 catch error e-",e);
+                    document.getElementById("h1_1").setAttribute("class","xyz");
+                }
+            }
+
+            function test2(){
+                console.log("--called test2");
+                try{
+                    document.getElementById("abc")?.setAttribute("class","xyz");
+                }catch(e){
+                    console.log("--inside test2 catch error e-",e);
+                    document.getElementById("h1_2").setAttribute("class","xyz");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="h1_1">hello</h1>
+        <button onclick="test1()">setAttribute check</button>
+        <h1 id="h1_2">hi</h1>
+        <button onclick="test2()">setAttribute op check</button>
+    </body>
+</html>

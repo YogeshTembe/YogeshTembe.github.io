@@ -22,12 +22,39 @@
                     document.getElementById("h1_2").style.color="purple";
                 }
             }
+
+            function test3(){
+                console.log("--called test3");
+                try{    
+                    var a={};
+                    console.log(a.b?.href);
+                }catch(e){
+                    console.log("--inside test3 catch error-",e);
+                    document.getElementById("h1_3").style.color="green";
+                }
+            }
+
+            function test4(){
+                console.log("--called test4");
+                try{    
+                    var a={};
+                    console.log(a.b?.src);
+                }catch(e){
+                    console.log("--inside test4 catch error-",e);
+                    document.getElementById("h1_4").style.color="pink";
+                }
+            }
+
         </script>
     </head>
     <body>
-        <h1 id="h1_1">hello</h1>
+        <h1 id="h1_1">href</h1>
         <button onclick="test1()">href check</button>
-        <h1 id="h1_2">Hi</h1>
+        <h1 id="h1_2">src</h1>
         <button onclick="test2()">src check</button>
+        <h1 id="h1_3">href op</h1>
+        <button onclick="test3()">href op check</button>
+        <h1 id="h1_4">src op</h1>
+        <button onclick="test4()">src op check</button>
     </body>
 </html>
