@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <script>
+            function openwindow(){
+                window?.open?.("https://www.google.com",'_blank');
+            }
+            function hreftest(){
+                window?.open?.(document?.getElementById("wiki")?.['href'],'_blank');
+            }
+            function arraytest(){
+                var a={
+                    src:"test",
+                    func(a,b){
+                        console.log("func called - ",a,b);
+                    }
+                }
+                console.log("a?.['src'] - ",a?.['src']);
+                a?.func?.(3,5);
+            }
+            function nestedarraytest(){
+                var a={
+                    src: { href: "test", 
+                        open(b,c){
+                            console.log("--open called b,c - ",b,c);
+                        }
+                    },  
+                };
+                console.log("a?.['src']?.['href'] - ",a?.['src']?.['href']);
+                a?.['src']?.['open']?.(3,4);
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="h1_1">some</h1>
+        <button onclick="openwindow()">open new window</button>
+        <br>
+        <a id="wiki" href="https://www.wikipedia.org">wiki</a>
+        <br>
+        <button onclick="hreftest()">href test</button>
+        <br>
+        <button onclick="arraytest()">array opch test</button>
+        <br>
+        <button onclick="nestedarraytest()">nestedarraytest</button>
+    </body>
+</html>
