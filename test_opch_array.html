@@ -1,9 +1,17 @@
 <html>
     <head>
-        <script src="./test.js"></script>
+        <script>
+            function attachscript(){
+                let s=document.createElement("script");
+                s.src="./test.js";
+                document.head.appendChild(s);
+            }
+        </script>
     </head>
     <body>
         <h1 id="h1_1">some</h1>
+        <button onclick="attachscript()">attach script</button>
+        <br>
         <button onclick="openwindow()">open new window</button>
         <br>
         <button onclick="openwindowopch()">open new window opch</button>
