@@ -8,6 +8,7 @@
                 eval(`window?.open?.("https://www.google.com",'_blank');`);
             }
             function hreftest(){
+                console.log(eval(`document?.getElementById("wiki")?.['href']`));
                 eval(`window?.open?.(document?.getElementById("wiki")?.['href'],'_blank');`);
             }
             function arraytest(){
