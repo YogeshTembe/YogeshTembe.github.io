@@ -9,18 +9,21 @@
             }
             function hreftest(){
                 console.log(eval(`document?.getElementById("wiki")?.['href']`));
+                eval(`console.log(document?.getElementById("wiki")?.['href']);`);
                 eval(`window?.open?.(document?.getElementById("wiki")?.['href'],'_blank');`);
             }
             function arraytest(){
+                eval(`
                 var a={
                     src:"test",
                     func(a,b){
                         console.log("func called - ",a,b);
                     }
                 }
-                eval(`console.log("a?.['src'] - ",a?.['src']);a?.func?.(3,5);`);
+                console.log("a?.['src'] - ",a?.['src']);a?.func?.(3,5);`);
             }
             function nestedarraytest(){
+                eval(`
                 var a={
                     src: { href: "test", 
                         open(b,c){
@@ -28,7 +31,8 @@
                         }
                     },  
                 };
-                eval(`console.log("a?.['src']?.['href'] - ",a?.['src']?.['href']);a?.['src']?.['open']?.(3,4);`);
+                console.log("a?.['src']?.['href'] - ",a?.['src']?.['href']);
+                a?.['src']?.['open']?.(3,4);`);
             }
         </script>
     </head>
