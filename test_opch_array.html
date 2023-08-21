@@ -24,15 +24,18 @@
             }
             function nestedarraytest(){
                 eval(`
-                var a={
-                    src: { href: "test", 
-                        open(b,c){
-                            console.log("--open called b,c - ",b,c);
-                        }
-                    },  
-                };
-                console.log("a?.['src']?.['href'] - ",a?.['src']?.['href']);
-                a?.['src']?.['open']?.(3,4);`);
+                function some(){
+                    var a={
+                        src: { href: "test", 
+                            open(b,c){
+                                console.log("--open called b,c - ",b,c);
+                            }
+                        },  
+                    };
+                    console.log("a?.['src']?.['href'] - ",a?.['src']?.['href']);
+                    a?.['src']?.['open']?.(3,4);
+                }
+                some();`);
             }
         </script>
     </head>
