@@ -5,10 +5,11 @@
                 eval(`window.open("https://www.google.com",'_blank');`);
             }
             function openwindowopch(){
+                window?.open?.("https://www.google.com",'_blank');
                 eval(`window?.open?.("https://www.google.com",'_blank');`);
             }
             function hreftest(){
-                console.log(eval(`document?.getElementById("wiki")?.['href']`));
+                console.log(document?.getElementById("wiki")?.['href']);
                 eval(`console.log(document?.getElementById("wiki")?.['href']);`);
                 eval(`window?.open?.(document?.getElementById("wiki")?.['href'],'_blank');`);
             }
