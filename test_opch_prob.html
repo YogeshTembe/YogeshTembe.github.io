@@ -3,13 +3,24 @@
         <script>
             function test1(){
                 console.log("--called test1");
-                var a={src:{href:"yes"}};
-                eval('console.log(a?.src.href);');
+                eval('var a={src:{href:"yes"}};console.log(a?.src.href);');
+            }
+            function test2(){
+                console.log("--called test2");
+                eval('var a=null;console.log(a?.src.href.url);');
+            }
+            function test3(){
+                console.log("--called test3");
+                eval('var a=null;console.log(a?.src.href?.url.host);');
             }
         </script>
     </head>
     <body>
-        Hello
-        <button onclick="test1()">click</button>
+        <br>
+        <button onclick="test1()">click1</button>
+        <br>
+        <button onclick="test2()">click2</button>
+        <br>
+        <button onclick="test3()">click3</button>
     </body>
 </html>
