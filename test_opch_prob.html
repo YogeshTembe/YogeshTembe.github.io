@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <script>
+            function test1(){
+                console.log("--called test1");
+                var a={src:{href:"yes"}};
+                eval('console.log(a?.src.href);');
+            }
+        </script>
+    </head>
+    <body>
+        Hello
+        <button onclick="test1()">click</button>
+    </body>
+</html>
