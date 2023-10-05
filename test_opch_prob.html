@@ -17,6 +17,10 @@
                 console.log("--called test4");
                 eval('var a={src:{b:{href:null}}};console.log(a?.src?.b.href?.url.host);');
             }
+            function test5(){
+                console.log("--called test5");
+                eval('var a={src:{open:function(a,b){return a+b;}}}; console.log(a?.src.open?.(3,5));');
+            }
         </script>
     </head>
     <body>
@@ -28,5 +32,7 @@
         <button onclick="test3()">click3</button>
         <br>
         <button onclick="test4()">click4</button>
+        <br>
+        <button onclick="test5()">click5</button>
     </body>
 </html>
