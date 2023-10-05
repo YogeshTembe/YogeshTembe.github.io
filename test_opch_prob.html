@@ -14,7 +14,7 @@
                 eval('var a=null;console.log(a?.src.href?.url.host);');
             }
             function test4(){
-                console.log("--called test3");
+                console.log("--called test4");
                 eval('var a={src:{b:{href:null}}};console.log(a?.src?.b.href?.url.host);');
             }
         </script>
@@ -27,8 +27,6 @@
         <br>
         <button onclick="test3()">click3</button>
         <br>
-        <button onclick="test4()">click3</button>
-        <br>
-        <button onclick="test5()">click3</button>
+        <button onclick="test4()">click4</button>
     </body>
 </html>
