@@ -3,23 +3,32 @@
         <script>
             function test1(){
                 console.log("--called test1");
+                var a={src:{href:"yes"}};console.log(a?.src.href);
                 eval('var a={src:{href:"yes"}};console.log(a?.src.href);');
             }
             function test2(){
                 console.log("--called test2");
+                var a=null;console.log(a?.src.href.url);
                 eval('var a=null;console.log(a?.src.href.url);');
             }
             function test3(){
                 console.log("--called test3");
+                var a=null;console.log(a?.src.href?.url.host);
                 eval('var a=null;console.log(a?.src.href?.url.host);');
             }
             function test4(){
                 console.log("--called test4");
+                var a={src:{b:{href:null}}};console.log(a?.src?.b.href?.url.host);
                 eval('var a={src:{b:{href:null}}};console.log(a?.src?.b.href?.url.host);');
             }
             function test5(){
                 console.log("--called test5");
+                var a={src:{open:function(a,b){return a+b;}}}; 
+                console.log(a?.src.open?.(3,5));
                 eval('var a={src:{open:function(a,b){return a+b;}}}; console.log(a?.src.open?.(3,5));');
+                var b={close:function(a,b){return {d:a+b};}};
+                console.log(b?.close(3,4)?.d);
+                eval('var b={close:function(a,b){return {d:a+b};}}; console.log(b?.close(3,4)?.d);');
             }
         </script>
     </head>
