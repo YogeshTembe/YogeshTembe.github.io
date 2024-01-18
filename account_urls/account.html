@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script>
+            function addlink(){
+                var atag=document.createElement('a');
+                atag.href="https://accounts.google.com.sg/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=GAZAmgQ";
+                atag.innerHTML="new anchor"
+                document.body.appendChild(atag);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Test Google Account urls</h1>
+        <a href="https://www.w3schools.com">w3</a><br>
+        <a href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=GAZAmgQ">Accounts</a><br>
+        <a href="https://accounts.google.com.sg/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=GAZAmgQ">Accounts sg</a><br>
+        <a href="https://accounts.google.com.de/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=GAZAmgQ">Accounts de</a><br>
+        <a href="https://accounts.google.com.uk/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=GAZAmgQ">Accounts uk</a><br>
+        <button onclick="addlink()">Add anchor</button><br>
+    </body>
+</html>
