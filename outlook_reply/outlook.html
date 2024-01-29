@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script>
+            document.addEventListener("DOMContentLoaded",()=>{
+                setTimeout(()=>{
+                    const resources = performance.getEntriesByType("resource");
+                    //console.log("resources-",resources);
+                    resources.forEach((entry) => {
+                        console.log(`${entry.name}'s startTime: ${entry.responseEnd}`);
+                    });
+                },4000);
+            })
+            
+            var test_obj={
+                getEntriesByType:function(a){
+                    console.log("called getEntriesByType on test_obj a-",a);
+                }
+            }
+            test_obj.getEntriesByType("some");
+        </script>
+    </head>
+    <body>
+        <h1>Outlook reply test</h1>
+        <h3>performance reply rewrite</h3>
+        <img class="fit-picture" src="https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg" alt="Grapefruit slice atop a pile of other slices" />
+    </body>
+</html>
