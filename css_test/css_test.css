@@ -2,20 +2,5 @@
 @import url("styles.css");
 
 .someclass{
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Activemarker2.PNG/75px-Activemarker2.PNG');
     font-family: "Sofia", sans-serif;
 }
-
-.test2class{
-    background-image: url('https://www.w3schools.com/html/pic_trulli.jpg');
-}
-
-/*
-@import url('https://fonts-googleapis-com.bglhs.net/css?bitglass_media=1&family=Sofia');
-@import url("styles.css?bitglass_media=1");
-
-.someclass{
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Activemarker2.PNG/75px-Activemarker2.PNG');
-    font-family: "Sofia", sans-serif;
-}
-*/
