@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Sofia');
+@import url("styles.css");
+
+.someclass{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Activemarker2.PNG/75px-Activemarker2.PNG');
+    font-family: "Sofia", sans-serif;
+}
